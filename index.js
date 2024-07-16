@@ -8,7 +8,7 @@ const port = process.env.PORT
 const app = express()
 app.use(cors(
     {
-        origin:["https://notes-app-frontend-git-master-sammy-altmans-projects.vercel.app/"],
+        origin:["https://notes-app-frontend-git-master-sammy-altmans-projects.vercel.app"],
         methods:["POST","GET","PATCH","DELETE"],
         credentials:true
     }
