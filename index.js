@@ -6,10 +6,18 @@ const { noteRouter } = require("./routes/note.routes")
 require("dotenv").config()
 const port = process.env.PORT
 const app = express()
-app.use(cors())
+app.use(cors(
+    {
+        origin:["https://notes-app-frontend-git-master-sammy-altmans-projects.vercel.app/"],
+        methods:["POST","GET","PATCH","DELETE"],
+        credentials:true
+    }
+))
 app.use(express.json())
 app.use("/user",userRouter)
 app.use("/note",noteRouter)
+
+
 
 
 app.get("/",(req,res)=>{
