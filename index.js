@@ -4,7 +4,7 @@ const cors = require("cors")
 const app = express()
 app.use(cors(
     {
-        origin:["notes-app-frontend-rho.vercel.app"],
+        origin:["https://notes-app-frontend-sammy-altmans-projects.vercel.app"],
         methods:["POST","GET","PATCH","DELETE"],
         credentials:true
     }
